@@ -1,9 +1,12 @@
 <html>
 <body>
-    <script type="text/javascript" src="https://static.contentdl.net/vene/sdk/js/vene-sdk.min.js"></script>
+<script type="text/javascript" src="https://static.contentdl.net/vene/sdk/js/vene-sdk.min.js"></script>
 <script type="text/javascript">
    VENE.configure({ trackingDomain: "https://slop-nite.com/" });
-   VENE.click();
+   VENE.click(
+      {}, 
+      ({ydrid}) => console.log('received ydrid:', ydrid), 
+      (errormsg) => console.error('request error', errormsg));
 </script>
 HERE IS THE DIRECT CLICK SCHTUFF<br>
     <a href="/direct/direct_event.html">Go to direct event</a>
